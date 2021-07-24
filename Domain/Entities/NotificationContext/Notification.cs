@@ -1,8 +1,6 @@
-using Domain.Notifications.Interfaces;
-
-namespace Domain.Notifications
+namespace Domain.Entities.NotificationContext
 {
-    public class Notification : INotification
+    public class Notification
     {
         public string Message { get; private set; }
         public string PropertyName { get; private set; }
@@ -11,11 +9,6 @@ namespace Domain.Notifications
         {
             Message = message;
             PropertyName = propertyName;
-        }
-
-        public void AddNotification()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

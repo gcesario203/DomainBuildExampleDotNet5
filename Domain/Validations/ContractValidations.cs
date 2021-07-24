@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Domain.Notifications;
+using Domain.Entities.NotificationContext;
 
 namespace Domain.Validations
 {

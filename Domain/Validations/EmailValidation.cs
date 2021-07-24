@@ -1,5 +1,6 @@
 using System;
 using System.Net.Mail;
+using Domain.Entities.NotificationContext;
 
 namespace Domain.Validations
 {
@@ -15,7 +16,7 @@ namespace Domain.Validations
             }
             catch (FormatException)
             {
-                AddNotification(new Domain.Notifications.Notification(pMessage, pProperty));
+                AddNotification(new Notification(pMessage, pProperty));
 
                 return this;
             }

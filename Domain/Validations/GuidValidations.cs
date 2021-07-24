@@ -1,4 +1,5 @@
 using System;
+using Domain.Entities.NotificationContext;
 
 namespace Domain.Validations
 {
@@ -8,7 +9,7 @@ namespace Domain.Validations
         {
             if(pGuid! is Guid)
             {
-                AddNotification(new Domain.Notifications.Notification(pMessage, pProperty));
+                AddNotification(new Notification(pMessage, pProperty));
             }
 
             return this;

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Domain.Validations.Interfaces;
-using Domain.Notifications;
+using Domain.Entities.NotificationContext;
 
 namespace Domain.Entities.VaccineContext
 {

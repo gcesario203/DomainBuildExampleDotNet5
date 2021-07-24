@@ -1,4 +1,5 @@
 using Domain.Entities.ValueObjects;
+using Domain.Entities.NotificationContext;
 
 namespace Domain.Validations
 {
@@ -12,7 +13,7 @@ namespace Domain.Validations
             {
                 if(!IsCpfOk(pDocument.DocumentNumber))
                 {
-                    AddNotification(new Domain.Notifications.Notification(pMessage, pProperty));
+                    AddNotification(new Notification(pMessage, pProperty));
                 }
             }
 
@@ -20,7 +21,7 @@ namespace Domain.Validations
             {
                 if(!IsCnpjOk(pDocument.DocumentNumber))
                 {
-                    AddNotification(new Domain.Notifications.Notification(pMessage,pProperty));
+                    AddNotification(new Notification(pMessage,pProperty));
                 }
             }
 

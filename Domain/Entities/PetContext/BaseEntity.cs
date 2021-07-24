@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Domain.Entities.ValueObjects;
-using Domain.Notifications;
+using Domain.Entities.NotificationContext;
 using Domain.Validations.Interfaces;
 
 namespace Domain.Entities.PetContext

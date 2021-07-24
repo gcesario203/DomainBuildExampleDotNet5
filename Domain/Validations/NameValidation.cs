@@ -1,5 +1,5 @@
 using Domain.Entities.ValueObjects;
-using Domain.Notifications;
+using Domain.Entities.NotificationContext;
 
 namespace Domain.Validations
 {
