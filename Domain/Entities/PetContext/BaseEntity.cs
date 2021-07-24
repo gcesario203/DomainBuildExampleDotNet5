@@ -15,7 +15,7 @@ namespace Domain.Entities.PetContext
             this.Id = Guid.NewGuid();
             this.FirstName = pFirstName;
             this.LastName = pLastName;
-            this.CreatedAt = DateTime.UtcNow();
+            this.CreatedAt = DateTime.UtcNow;
         }
     }
 }

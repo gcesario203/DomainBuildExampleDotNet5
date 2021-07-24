@@ -10,11 +10,11 @@ namespace Domain.Entities.VaccineContext
          public string Description { get; private set; }
         public DateTime CreatedAt { get; private set; }
 
-        public BaseEntity(string pFirstName, string pLastName, string pDescription)
+        public BaseEntity(string pDescription)
         {
             this.Id = Guid.NewGuid();
             this.Description = pDescription;
-            this.CreatedAt = DateTime.UtcNow();
+            this.CreatedAt = DateTime.UtcNow;
         }
 
         public virtual void SetDescription(string pDescription)
