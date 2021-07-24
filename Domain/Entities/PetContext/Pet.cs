@@ -1,12 +1,13 @@
+using Domain.Entities.ValueObjects;
+
 namespace Domain.Entities.PetContext
 {
     public class Pet : BaseEntity
     {
         public int Identifier { get; private set; }
 
-        public Pet(string pFirstName,
-                   string pLastName,
-                   int pIdentifier) : base( pFirstName, pLastName )
+        public Pet(Name pName,
+                   int pIdentifier) : base( pName )
         {
             this.Identifier = pIdentifier;
         }

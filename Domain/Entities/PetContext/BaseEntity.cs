@@ -1,4 +1,5 @@
 using System;
+using Domain.Entities.ValueObjects;
 
 namespace Domain.Entities.PetContext
 {
@@ -6,15 +7,14 @@ namespace Domain.Entities.PetContext
     {
         //GUID = Global Unique Identifier
         public Guid Id { get; private set; }
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
+
+        public Name Name { get; private set; }
         public DateTime CreatedAt { get; private set; }
 
-        public BaseEntity(string pFirstName, string pLastName)
+        public BaseEntity(Name pName)
         {
             this.Id = Guid.NewGuid();
-            this.FirstName = pFirstName;
-            this.LastName = pLastName;
+            this.Name = pName;
             this.CreatedAt = DateTime.UtcNow;
         }
     }

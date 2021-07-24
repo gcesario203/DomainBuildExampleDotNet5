@@ -1,22 +1,19 @@
-using System;
+using Domain.Entities.ValueObjects;
 
 namespace Domain.Entities.PetContext
 {
     public class Owner : BaseEntity
     {
         public string Email { get; private set; }
-        public string DocumentNumber { get; private set; }
-        public int DocumentType { get; set; }
 
-        public Owner(string pFirstName,
-                       string pLastName,
+        public Document Dpcument { get; private set; }
+
+        public Owner(Name pName,
                        string pEmail,
-                       string pDocumentNumber,
-                       int pDocumentType) : base(pFirstName, pLastName)
+                       Document pDocument) : base(pName)
         {
             this.Email = pEmail;
-            this.DocumentNumber = pDocumentNumber;
-            this.DocumentType = pDocumentType;
+            this.Dpcument = pDocument;
         }
 
         public void SetEmail(string pEmail)
