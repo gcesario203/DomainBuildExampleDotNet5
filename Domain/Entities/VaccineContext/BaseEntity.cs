@@ -1,9 +1,15 @@
 using System;
+using System.Collections.Generic;
+using Domain.Validations.Interfaces;
+using Domain.Notifications;
 
 namespace Domain.Entities.VaccineContext
 {
-    public abstract class BaseEntity
+    public abstract class BaseEntity : IValidations
     {
+        private List<Notification> _notifications;
+
+        public IReadOnlyCollection<Notification> Notifications => _notifications;
         //GUID = Global Unique Identifier
         public Guid Id { get; private set; }
 
@@ -21,5 +27,12 @@ namespace Domain.Entities.VaccineContext
         {
             this.Description = pDescription;
         }
+
+        public void SetNotifications(List<Notification> pNotificationList)
+        {
+            this._notifications = pNotificationList;
+        }
+
+        public abstract bool Validation();
     }
 }
